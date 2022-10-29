@@ -8,8 +8,10 @@ import Playlist from '../Playlist/Playlist';
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      searchResults: [{name: 'name', artist: 'artist', album: 'album', id: 1}, {name: 'name2', artist: 'artist2', album: 'album2', id: 2}]
+    this.state = {  //hardcode for now
+      searchResults: [{name: 'name', artist: 'artist', album: 'album', id: 1}, {name: 'name2', artist: 'artist2', album: 'album2', id: 2}],
+      playlistName: 'playlistname',
+      playlistTrack: [{name: 'playname', artist: 'playartist', album: 'palyalbum', id: 3}, {name: 'playname2', artist: 'playartist2', album: 'album2', id: 4}]
     }
   }
 
@@ -21,7 +23,7 @@ class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults}/>
-            <Playlist />
+            <Playlist playlistName={this.state.playlistName} playlistTrack={this.state.playlistTrack}/>
           </div>
         </div>
       </div>
