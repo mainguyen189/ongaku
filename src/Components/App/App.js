@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {  //hardcode for now
       searchResults: [{ name: 'name', artist: 'artist', album: 'album', id: 1 }, { name: 'name2', artist: 'artist2', album: 'album2', id: 2 }],
       playlistName: 'playlistname',
-      playlistTrack: [{ name: 'playname', artist: 'playartist', album: 'palyalbum', id: 3 }, { name: 'playname2', artist: 'playartist2', album: 'album2', id: 4 }]
+      playlistTrack: [{ name: 'name3', artist: 'artist3', album: 'album3', id: 3 }, { name: 'name4', artist: 'artist4', album: 'album4', id: 4 }]
     };
 
     this.addTrack = this.addTrack.bind(this);
@@ -41,8 +41,7 @@ class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
-            <Playlist playlistName={this.state.playlistName} playlistTrack={this.state.playlistTrack}
-              onRemove={this.removeTrack} />
+            <Playlist playlistName={this.state.playlistName} playlistTrack={this.state.playlistTrack} onRemove={this.removeTrack} />
           </div>
         </div>
       </div>
